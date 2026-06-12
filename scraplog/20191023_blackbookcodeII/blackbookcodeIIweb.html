@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="blackbookcodeIIweb.css">
+<title>BlackBookCodeII URLBattler</title>
+</head>
+<body>
+
+<script type="text/javascript" src="blackbookcodeIIweb.js"></script>
+
+<!--タイトル-->
+
+<div id="gametitle">
+<span class="maintitle">BlackBookCodeII</span>
+<span class="subtitle">URLBattler</span>
+<input class="fit" type="button" value="リセット" onclick="location.reload();">
+</div>
+
+<!--ゲーム説明-->
+<div id="inst">
+<div class="marquee">
+このゲームはURLを元にデータを生成し戦うゲームです。最強のウェブサイトを探そう！！
+</div>
+</div>
+<!--入力部分-->
+
+<div id="input_display" class="clearfix fit">
+
+<div id="p1_input">
+  <img src="img/p1.png">
+
+  <input type="url" id="urlcode_1" placeholder="URL入力">
+
+  <input type="button" id="player1_button" value="入力" onclick="player1_datain();">
+
+  <div class="fwhite">Player1→<span id="data1"></span></div>
+</div>
+
+<div id="p2_input">
+  <img src="img/p2.png">
+
+  <input type="url" id="urlcode_2" placeholder="URL入力">
+
+  <input type="button" id="player2_button" value="入力" onclick="player2_datain();">
+
+  <div class="fwhite">Player2→<span id="data2"></span></div>
+</div>
+
+</div>
+
+
+
+
+
+<!--ステータス部分-->
+
+<div id="state_display" class="clearfix">
+
+<div id="p1_display_spot" class="moji">
+  <div class="fit">
+    <meter value="0" id="Player1_HP_gage" max="0"></meter>
+  </div>
+<div class="fgreen tshadow fit"><span id="P1_HP_data">no data</span></div>
+<div class="fred tshadow fit"><span id="P1_ATK_data">no data</span></div>
+<div class="fblue tshadow fit"><span id="P1_DEF_data">no data</span></div>
+<div class="fyellow tshadow fit"><span id="P1_AGL_data">no data</span></div>
+</div>
+
+<div id="state_displayname_spot" class="moji">
+  <div class="fitbutton">
+    <input type="button" id="fight" class="startbutton" value="戦闘開始" onclick="Battle_start();music_start();">
+  </div>
+<div class="backgreen fit boxpart">生命力</div>
+<div class="backred fit boxpart">攻撃力</div>
+<div class="backblue fit boxpart">防御力</div>
+<div class="backyellow fit boxpart">行動力</div>
+</div>
+
+<div id="p2_display_spot" class="moji">
+  <div class="fit">
+    <meter value="0" id="Player2_HP_gage" max="0"></meter>
+  </div>
+<div class="fgreen tshadow fit"><span id="P2_HP_data">no data</span></div>
+<div class="fred tshadow fit"><span id="P2_ATK_data">no data</span></div>
+<div class="fblue tshadow fit"><span id="P2_DEF_data">no data</span></div>
+<div class="fyellow tshadow fit"><span id="P2_AGL_data">no data</span></div>
+</div>
+
+</div>
+
+
+
+<div id="bottom_block">
+
+<p class="battlemoji">バトルログ<br><span id="DamagePoint"></span></p>
+
+</div>
+
+
+
+<!--ゲーム音楽-->
+
+<audio id="home_music" src="bgm/yukumomurax.mp3" loop></audio>
+<audio id="battle_music1" src="bgm/EleganceBet.mp3" loop></audio>
+<audio id="battle_music2" src="bgm/yukumoramen.mp3" loop></audio>
+<audio id="battle_music3" src="bgm/toysmancer.mp3" loop></audio>
+
+<!--効果音-->
+
+<audio id="start_voice" src="soundeffect/start.mp3"></audio>
+<audio id="finish_voice" src="soundeffect/finish.mp3"></audio>
+<audio id="finish_se" src="soundeffect/end.mp3"></audio>
+<audio id="draw_voice" src="soundeffect/timeover.mp3"></audio>
+<audio id="hit1" src="soundeffect/p1.mp3"></audio>
+<audio id="hit2" src="soundeffect/p2.mp3"></audio>
+
+<audio id="tori" src="soundeffect/genkidesuka.mp3"></audio>
+<audio id="extal1" src="soundeffect/extal1.mp3"></audio>
+<audio id="extal2" src="soundeffect/extal2.mp3"></audio>
+<audio id="extal3" src="soundeffect/extal3.mp3"></audio>
+<audio id="extal4" src="soundeffect/extal4.mp3"></audio>
+<audio id="extal5" src="soundeffect/extal5.mp3"></audio>
+<audio id="extal6" src="soundeffect/extal6.mp3"></audio>
+<audio id="extal7" src="soundeffect/extal7.mp3"></audio>
+<audio id="extal8" src="soundeffect/extal8.mp3"></audio>
+
+<!--効果音-->
+
+</body>
+</html>

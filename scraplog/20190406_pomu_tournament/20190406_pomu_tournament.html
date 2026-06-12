@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style type="text/css">
+ body {
+  background: linear-gradient(90deg, #33CC66, #CC9966);
+  padding: 10px 40px;
+ }
+#pagebody {padding: 20px;}
+h1{color:#990000;}
+h2{color:#FF9900;}
+h3{color:#CC3333;}
+.pomuspace{background-color:#00FFFF; width:200px; padding: 0px 10px;}
+table {border:5px solid #000000;}
+td {border:5px solid #000000;}
+.black{background-color:#000000;}
+.lime{background-color:#CCFF00;}
+
+</style>
+</head>
+<body>
+
+
+
+<div id="pagebody">
+
+
+
+<h1>第一回 King of PomuSound</h1>
+
+<div id="pomu" class="pomuspace">ボスの名前</div>
+
+<input type="button" id="pmsw" value="選曲開始" onclick="pomuswitch();">
+<input type="button" value="ストップ" onclick="pomuswitchstop();">
+
+<br><br><br>
+
+
+
+<script>
+
+function bossselect(){
+var array = ["コロンオヤブン", "ミノタウロス", "フレア・ヴォルグ", "覆面戦士", "マウエズ", "ピラーゴーレム"];
+pomu.innerHTML = array[Math.floor(Math.random() * array.length)];
+}
+
+function pomuswitch(){
+slotstart = window.setInterval("bossselect()",50);
+document.getElementById("pmsw").disabled = true;
+}
+
+function pomuswitchstop(){
+window.clearInterval(slotstart);
+document.getElementById("pmsw").disabled = false;
+}
+
+</script>
+
+
+
+
+
+<h2>トーナメント表</h2>
+<pre>開始 2019/4/6 20:00 〜 終了 2019/4/6 23:30</pre>
+<table>
+ <tr>
+  <td>名前</td>
+  <td class="lime">myu</td>
+  <td class="lime">haru</td>
+  <td class="lime">kuri</td>
+  <td class="lime">krnk</td>
+  <td class="lime">akani</td>
+  <td class="lime">irene</td>
+  <td>順位</td>
+ </tr>
+ <tr>
+  <td class="lime">myu</td>
+  <td class="black"></td>
+  <td>×<br>Graze4</td>
+  <td>○<br>Graze0</td>
+  <td>○<br>Graze0</td>
+  <td>×<br>Graze4</td>
+  <td>○<br>Graze2</td>
+  <td>3位</td>
+ </tr>
+ <tr>
+  <td class="lime">haru</td>
+  <td>○<br>Graze3</td>
+  <td class="black"></td>
+  <td>○<br>Graze1</td>
+  <td>×<br>Graze7</td>
+  <td>×<br>Graze0</td>
+  <td>×<br>Graze3</td>
+  <td>4位</td>
+ </tr>
+ <tr>
+  <td class="lime">kuri</td>
+  <td>×<br>Graze0</td>
+  <td>×<br>Graze0</td>
+  <td class="black"></td>
+  <td>×<br>Graze0</td>
+  <td>×<br>Graze0</td>
+  <td>×<br>Graze3</td>
+  <td>6位</td>
+ </tr>
+ <tr>
+  <td class="lime">krnk</td>
+  <td>×<br>Graze6</td>
+  <td>○<br>Graze4</td>
+  <td>○<br>Graze0</td>
+  <td class="black"></td>
+  <td>×<br>Graze6</td>
+  <td>×<br>Graze4</td>
+  <td>5位</td>
+ </tr>
+ <tr>
+  <td class="lime">akani</td>
+  <td>○<br>Graze0</td>
+  <td>○<br>Graze0</td>
+  <td>○<br>Graze0</td>
+  <td>○<br>Graze0</td>
+  <td class="black"></td>
+  <td>○<br>Graze0</td>
+  <td>1位</td>
+ </tr>
+ <tr>
+  <td class="lime">irene</td>
+  <td>×<br>Graze3</td>
+  <td>○<br>Graze0</td>
+  <td>○<br>Graze0</td>
+  <td>○<br>Graze0</td>
+  <td>×<br>Graze0</td>
+  <td class="black"></td>
+  <td>2位</td>
+ </tr>
+</table>
+
+
+
+<h2>開催予定日</h2>
+<pre>
+2019/4/6(土)20:00頃​
+</pre>
+
+<h2>ルール</h2>
+<pre>
+難易度は「むずかしい」で行う。
+​対戦途中で接続が切れた場合は、再試合とする。
+
+トーナメント表には、結果(○or×)とGrazeポイントを記入する。
+優勝者は勝利数の多い人である。
+もし、勝ち数が同数の人がいた場合、
+Grazeポイントが少ない人上位2名で優勝決定戦を行う。
+</pre>
+
+<h3>景品</h3>
+<pre>
+1位 → ◇コロンオヤブン
+2位 → ◇ミノタウロス
+3位 → ◇フレア・ヴォルグ
+4位 → ◇マウエズ
+5位 → ◇覆面戦士
+6位 → ◇邪悪なる魔剣
+
+</pre>
+
+<h4>(おまけ)ユクモデザエモン音楽</h4>
+<audio src="dezaemon_for_scrap.mp3" controls loop></audio>
+
+<h2>表彰式</h2>
+<img src="award.png">
+
+<h3>大会の後</h3>
+<img src="omake.png">
+
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+body {
+padding:20px;
+-webkit-touch-callout:none; /* リンク長押しのポップアップを無効化 */
+-webkit-user-select:none; /* テキスト長押しの選択ボックスを無効化 */
+}
+canvas{
+border: outset 10px #FF9900;
+}
+</style>
+<meta charset="UTF-8">
+<title>落ちてくるブドウを収穫しようとしたら手裏剣も降ってきた件</title>
+<link rel="shortcut icon" href="img/whitebear.png">
+</head>
+<body>
+
+<canvas id="gamecanvas" width="1080" height="720"></canvas>
+<script src="jsgame.js"></script>
+
+
+
+<br>
+<input type="button" id="gamestart" value="GAME START" onclick="gameload();">
+<br>
+<input type="button" id="restart" value="RESTART" onclick="window.location.reload();">
+<p>操作説明</p>
+<pre>
+左移動　　：　←キー
+右移動　　：　→キー
+停止　　　：　↓キー
+ジャンプ　：　Spaceキー
+</pre>
+<p>ゲームの目的</p>
+<pre>
+ブドウを収穫するのだ。ブドウをとると果汁ゲージが溜るぞ。
+果汁ゲージを満タンにすればゲームクリアだ！
+ただし、手裏剣に当たると果汁が漏れてしまうので当たるなよ！！
+※ゲームクリアしたらRESTARTボタンを押してもう一度やるか、やりたくなければウインドウを閉じてね☆彡
+</pre>
+
+</body>
+</html>

@@ -1,0 +1,192 @@
+.clearfix:after{
+  content:"";
+  display:block;
+  clear:both;
+}
+
+body{
+background-color:#00FFFF;
+background-image:url(img/bbcwall.jpg);
+background-attachment:fixed;
+background-size:cover;
+background-repeat:no-repeat;
+width:100%;
+}
+
+/*ゲーム説明部分*/
+
+#inst{
+  margin:20px 0px 20px 80px;
+  width:800px;
+  overflow: hidden;
+}
+.marquee{
+  width:800px;
+  padding-left:800px;
+  white-space:nowrap;
+  animation-duration:8s;
+  animation-timing-function:linear;
+  animation-iteration-count:infinite;
+  color:#FF9900;
+  animation-name:notice;
+}
+@keyframes notice{
+  from    { transform: translate(0%); } 
+  100%,to { transform: translate(-100%); }
+}
+
+
+/*メーターの長さ*/
+
+meter{
+width:240px;
+}
+
+/*ボタン大きさ*/
+
+.startbutton{
+width:160px;
+}
+
+/*中央揃え*/
+
+.fit{
+text-align:center;
+margin:10px;
+}
+
+.fitbutton{
+text-align:center;
+margin:10px;
+}
+
+/*フォント*/
+
+.maintitle{
+font-family:fantasy;
+font-size:32px;
+font-weight:700;
+font-style:italic;
+}
+.subtitle{
+font-family:flosty;
+font-size:16px;
+font-weight:700;
+font-style:italic;
+}
+
+.moji{
+font-size:32px;
+}
+
+.battlemoji{
+font-size:16px;
+}
+
+.tshadow{
+text-shadow:4px 4px 2px #333333;
+}
+
+.fgreen{
+color:#00FF00;
+}
+
+.fred{
+color:#FF0000;
+}
+
+.fblue{
+color:#99CCFF;
+}
+
+.fyellow{
+color:#FFFF00;
+}
+
+.fwhite{
+color:#CCCCCC;
+}
+
+/*背景色*/
+
+.backgreen{
+background-color:#00FF00;
+}
+
+.backred{
+background-color:#FF0000;
+}
+
+.backblue{
+background-color:#99CCFF;
+}
+
+.backyellow{
+background-color:#FFFF00;
+}
+
+/*タイトル部分*/
+
+#gametitle{
+  margin:20px 200px;
+  width:800px;
+}
+
+/*入力部分*/
+
+#input_display{
+  margin:20px;
+  width:800px;
+}
+
+#p1_input{
+  width:400px;
+  float:left;
+}
+
+#p2_input{
+  width:400px;
+  float:left;
+}
+
+/*ステータス部分*/
+
+#state_display{
+  margin:20px;
+  width:800px;
+}
+
+#p1_display_spot{
+  width:300px;
+  float:left;
+}
+
+#state_displayname_spot{
+  width:200px;
+  float:left;
+}
+
+/*ステータス名の枠、暫定的に無しにした*/
+.boxpart{
+border:0px ridge #CC3399;
+}
+
+#p2_display_spot{
+  width:300px;
+  float:left;
+}
+
+/*バトルログ部分*/
+
+#bottom_block{
+width:800px;
+margin:20px;
+background-color:#111111;
+color:#EEEEEE;
+padding:0px 40px;
+border-style:solid;
+border-width:5px;
+border-color:#EEEEEE;
+border-radius:5px;
+box-shadow:20px 20px 40px 0px #333333;
+}

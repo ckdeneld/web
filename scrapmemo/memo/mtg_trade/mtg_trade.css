@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    padding: 20px;
+    background-image: url("mtg_trade.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.title-area {
+    margin: 0px 0px 20px 0px;
+}
+
+.info-area {
+    margin-bottom: 20px;
+    padding: 15px;
+
+    background: rgba(0,0,0,0.1);
+
+    color: #FFFFFF;
+
+    border-radius: 10px;
+
+    text-align: center;
+}
+
+.title-area h1 {
+    margin: 0;
+    padding: 20px;
+
+    text-align: center;
+    color: #f5e6b3;
+
+    background: rgba(0, 0, 0, 0.6);
+
+    border: 2px solid #b89b4a;
+
+    border-radius: 10px;
+
+    font-size: 48px;
+}
+
+.top-area {
+    display: flex;
+    gap: 20px;
+}
+
+.left-box {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-box {
+    width: 50%;
+    opacity: 0.85;
+}
+
+.bottom-area {
+    margin-top: 20px;
+    opacity: 0.85;
+}
+
+.footer-area {
+    margin-top: 20px;
+}

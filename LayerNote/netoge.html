@@ -1,0 +1,121 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="netoge.css">
+<title>LayerNote</title>
+</head>
+<body>
+
+<!--背景-->
+<video id="actwall" src="material/walltavern.mp4" muted playinline autoplay loop></video>
+<div id="layerwall"></div>
+
+<!--ページタイトル-->
+<div id="title_block">
+<span id="title">LayerNote</span>
+</div>
+<p>アプリレビューAPI取得ページ</p>
+
+<!--余白-->
+
+<div>
+
+
+
+</div>
+
+<!--ページ内リンク-->
+<ul>
+ <li class="orange">掲載アプリタイトル</li>
+  <ul>
+   <li><a href="#teravit_list">テラビット</a></li>
+   <li><a href="#mirrativ_list">ミラティブ</a></li>
+   <li><a href="#reality_list">リアリティ</a></li>
+   <li><a href="#metoria_list">星彩のメトリア</a></li>
+   <li><a href="#karitsu_list">カリツの伝説</a></li>
+   <li><a href="#hevban_list">ヘブンバーンズレッド</a></li>
+
+  </ul>
+</ul>
+
+<!--以下、アプリレビュー-->
+
+
+<!--https://itunes.apple.com/lookup?id=アプリ番号&country=JP-->
+<!--https://itunes.apple.com/jp/rss/customerreviews/id=アプリ番号/json?callback=任意の関数名-->
+
+
+<!--テラビット-->
+
+<div id="teravit_list">
+<img src="https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/c3/68/01/c36801e4-7398-4cb9-5458-37d806474449/AppIcon-1x_U007emarketing-0-10-0-85-220-0.png/100x100bb.jpg">
+<span class="apptitle">テラビット</span>
+</div>
+<script src="revscript/teravit.js"></script>
+<script src="https://itunes.apple.com/jp/rss/customerreviews/id=6449082565/json?callback=teravit"></script>
+
+<p><a href="#title_block">上へ戻る</a></p>
+
+<!--ミラティブ-->
+
+<div id="mirrativ_list">
+<img src="https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/9a/36/06/9a3606fc-c8c4-2c31-cc47-b2687a59e7e4/AppIcon-0-0-1x_U007epad-0-0-85-220.png/100x100bb.jpg">
+<span class="apptitle">ミラティブ</span>
+</div>
+<script src="revscript/mirrativ.js"></script>
+<script src="https://itunes.apple.com/jp/rss/customerreviews/id=1028944599/json?callback=mirrativ"></script>
+
+<p><a href="#title_block">上へ戻る</a></p>
+
+<!--リアリティ-->
+
+<div id="reality_list">
+<img src="https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/bf/10/3e/bf103e8e-3293-a729-7a99-84d65aaba628/AppIcon-0-0-1x_U007emarketing-0-10-0-85-220.png/100x100bb.jpg">
+<span class="apptitle">リアリティ</span>
+</div>
+<script src="revscript/reality.js"></script>
+<script src="https://itunes.apple.com/jp/rss/customerreviews/id=1404176564/json?callback=reality"></script>
+
+<p><a href="#title_block">上へ戻る</a></p>
+
+<!--星彩のメトリア-->
+
+<div id="metoria_list">
+<img src="https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/b4/17/b0/b417b014-2e76-60da-ad7b-460d41b31514/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/100x100bb.jpg">
+<span class="apptitle">星彩のメトリア</span>
+</div>
+<script src="revscript/metoria.js"></script>
+<script src="http://itunes.apple.com/jp/rss/customerreviews/id=1631278972/json?callback=metoria"></script>
+
+<p><a href="#title_block">上へ戻る</a></p>
+
+<!--カリツの伝説-->
+
+<div id="karitsu_list">
+<img src="https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/cd/2a/2e/cd2a2efc-e11e-65d5-b692-aaf0d06f913f/AppIcon-0-0-1x_U007emarketing-0-0-0-10-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/100x100bb.jpg">
+<span class="apptitle">カリツの伝説</span>
+</div>
+<script src="revscript/karitsu.js"></script>
+<script src="http://itunes.apple.com/jp/rss/customerreviews/id=6457261760/json?callback=karitsu"></script>
+
+<p><a href="#title_block">上へ戻る</a></p>
+
+<!--ヘブンバーンズレッド-->
+
+<div id="hevban_list">
+  <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/3e/eb/3b/3eeb3b2d-ba16-e044-a4d4-2738eedde23f/source/100x100bb.jpg">
+  <span class="apptitle">ヘブンバーンズレッド</span>
+  </div>
+  <script src="revscript/hevban.js"></script>
+  <script src="https://itunes.apple.com/jp/rss/customerreviews/id=1576831351/json?callback=hevban"></script>
+  
+  <p><a href="#title_block">上へ戻る</a></p>
+
+
+
+
+
+
+
+</body>
+</html>

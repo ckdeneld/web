@@ -1,0 +1,40 @@
+/*フロート解除*/
+
+.clearfix:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+
+
+/*フロートで3カラム*/
+
+#main{
+  width: 100%;
+}
+
+#leftblock{
+  background-color:#990000;
+  width: 22%;
+  margin: 1%;
+  padding: 1%;
+  float:left;
+}
+
+#centerblock{
+  background-color:#009900;
+  width: 44%;
+  margin: 1%;
+  padding: 1%;
+  float:left;
+}
+
+#rightblock{
+  background-color:#000099;
+  width: 22%;
+  margin: 1%;
+  padding: 1%;
+  float:left;
+}
+

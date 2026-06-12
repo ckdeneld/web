@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Appstoreの情報をAPIで取得する</title>
+</head>
+<body style="padding: 10px;">
+
+<pre style="width: 100%; white-space: pre-wrap;">
+
+Appstoreの情報をAPIで取得する
+
+
+
+はじめに
+基本的にJSONで取得できるのだが、JSONはJQueryでしか扱えないようなので、僕はJSONは閲覧程度に利用し、JSONPで取得できるものでページを作成するという方法をとった。
+一応、クロスドメインで連携できる(要はJavaScriptで処理ができる)のはJSONPだけらしい。
+
+
+
+〜〜〜アプリの情報をAPIで取得〜〜〜
+はじめにで書いたように、JSONはJavaScriptで扱えないので
+ここでは、アプリの画像のURLなどを調べるために用いる。
+
+
+
+itunes.apple.com/lookup?id=アプリ番号&country=JP
+(先頭のhttps://は省略)
+
+上記URLにアクセスするとアプリの情報がテキストファイルでダウンロードされる。
+アプリ番号に取得したいアプリのIDを入れる。
+アプリのIDはそのアプリのページのURLを見ればわかるので、パソコンでストア情報を見れば良い。
+スマートフォンだとストアに飛ばされて見れないと思う。
+例えば、トーラムオンラインのURLは下記なので
+apps.apple.com/jp/app/rpg-toramuonrain/id988683886
+(先頭のhttps://は省略)
+IDは「988683886」となる。
+末部の&country=JPは日本の情報を取得という意味で、ここを省略するとアメリカの情報になる。
+
+
+
+アプリ情報のJSONの中身について、主なものを挙げる。
+
+artworkUrl100 → アプリアイコン
+screenshotUrls → スクリーンショット
+
+アプリ制作をしたことがある人はわかると思うが
+アプリを提出するときに、アプリアイコンと数種類のスクリーンショットの提出が必要である。
+上記は、それらの画像である。
+大抵は、スクリーンショットにはタイトル画面があると思う。
+アイコンは、大中小と数種類提出しているところもある。
+
+
+
+〜〜〜アプリのレビューをAPIで取得〜〜〜
+
+itunes.apple.com/jp/rss/customerreviews/id=アプリ番号/json?callback=任意の関数名
+(先頭のhttps://は省略)
+
+JSONPで取得する方法である。
+アプリ番号は、取得したいアプリのID
+任意の関数名に入れたものが、コールバック関数名になる。
+この関数名を用いて、情報を取り出すのだが、当然だがわかりやすい名前を命名した方が良いと思う。
+
+余談だが、他のAPIでも、末尾に?callback=任意の関数名をつければJSONPのデータを取得できるが、それで取得できない場合、そのサイトがJSONPに対応していないということである。例えば、アプリの情報はJSONPで取得しようとするとエラーページに飛ばされる。
+
+JSONPは(JSONもだが)、配列で表現されているため、for文で文字列を取り出して使う。
+コールバック関数をarcalastにしてiOSアプリレビューを表示する例。(arcalast_listはHTML上で使うID名)
+
+function arcalast(data){
+
+//初めの一行だけ改行
+arcalast_list.appendChild(document.createElement("br"));
+
+//jsonデータから配列を抜き出す(＜は半角にする。)
+
+ for (i=0;i＜data.feed.entry.length;i++){
+  var rev = data.feed.entry[i];
+
+//投稿者名の取り出し
+var post_column = document.createTextNode("名前：");
+var post = document.createTextNode(rev.author.name.label);
+arcalast_list.appendChild(post_column);
+arcalast_list.appendChild(post);
+arcalast_list.appendChild(document.createElement("br"));
+
+//タイトル(件名)の取り出し
+var title_column = document.createTextNode("タイトル：");
+var title = document.createTextNode(rev.title.label);
+arcalast_list.appendChild(title_column);
+arcalast_list.appendChild(title);
+arcalast_list.appendChild(document.createElement("br"));
+
+//本文の取り出し
+var msg_column = document.createTextNode("レビュー：");
+var msg = document.createTextNode(rev.content.label);
+arcalast_list.appendChild(msg_column);
+arcalast_list.appendChild(msg);
+arcalast_list.appendChild(document.createElement("br"));
+
+//区切りとして水平線を引く
+arcalast_list.appendChild(document.createElement("hr"));
+
+ }
+}
+
+</pre>
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+.bubble {
+	position: fixed;      /* 固定位置 */
+	z-index: -99;         /* 文字などの要素の後ろに */
+	width: 100px;         /* 横幅 */
+	height: 100px;        /* 高さ */
+	border-radius: 50px 50px 0px 50px;
+        transform:rotate(45deg);
+	background: #009900;     /* 背景色 */
+	opacity: 0.2;         /* 透明度 */
+}

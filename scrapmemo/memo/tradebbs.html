@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>トレード掲示板を作る</title>
+</head>
+<body style="padding: 10px;">
+
+<pre style="width: 100%; white-space: pre-wrap;">
+
+トレード掲示板を作る。
+
+
+
+設計予定
+
+「Airtable」というWebサービスで作成し使う
+マジックザギャザリングのカード交換募集のページ作成
+以下を運用ルールとする
+〜
+トレードしたい人は、出すカードとトレードを希望するカードのショップ価格画面をスクリーンショットを添付（後でも良い）
+提案を受ける人は、それを見て合意したらトレード成立。ただし、価格が変わっている可能性もあるので同様にスクリーンショットを添付して交渉しても良い。
+〜
+
+
+
+「Airtable」
+
+新規登録
+
+Sign up for free
+以下を入力する
+〜
+メールアドレス
+Full name：適当でいい
+Password：簡単なパスワードは弾かれる
+〜
+Sign up
+
+この後、英語で質問されるが適当で良い。
+この質問の答えによって、AIがテーブルを作成してくれるというもの。
+今回は自分で作るので必要ない。
+
+適当に答えると（僕は全部「no」と書いた）、適当なテーブルが作成される。
+
+
+
+壱。作成開始
+
+右側の「New chat」は使わないので「＜＜」をクリックして閉じる。
+
+ベース名を変更する
+上部の「Untitled Base」をクリックで名前を変更する。「Mana Bazaar」にする。
+
+テーブル名を変更する
+上部の「Table1」をクリックして「Rename table」をクリック。「Trades」にする。
+
+表の列を一番右側以外を全部削除する
+　列のヘッダーを右クリック「Delete field」をクリック。警告が出た場合も「Delete field」を押す。
+
+列を作っていく
+一番右の列のヘッダー「Name」を右クリック「Edit field」をクリック。名前を「取引名」にする。「Save」
+
+作成日時、状況、出せるカード、希望するカード、価格スクリーンショット、X（任意）、備考の列を作る
+
+列の横の「＋」をクリックで新規の列を作成できる。
+
+Standard fields
+　「Created time」
+　　「Include time」のチェックを外す（どちらでもいい）
+「Field name」に「作成日時」と入力する
+「Create」
+
+Standard fields
+　「Single select」
+「Add option」
+　募集中
+　交渉中
+　完了
+の三つを作る。間違えたときや不要なものは右の×マークをクリックすれば消える。
+「Field name」に「状況」と入力する
+「Create」
+
+Standard fields
+　「Long text」
+「Field name」に「出せるカード」と入力する
+「Create」
+
+Standard fields
+　「Long text」
+「Field name」に「希望するカード」と入力する
+「Create」
+
+Standard fields
+　「Attachment」
+「Field name」に「価格スクリーンショット」と入力する
+「Create」
+
+Standard fields
+　「URL」
+「Field name」に「X（任意）」と入力する
+「Create」
+
+Standard fields
+　「Long text」
+「Field name」に「メモ」と入力する
+「Create」
+
+
+
+弍。表を整える
+
+列の幅はエクセルと同様にセルの横からドラッグすれば調節できる。
+
+上部左側の「4本の横線と上下矢印」アイコン（Row height）をクリック
+　「Medium」
+
+初期の行を消す
+　行を右クリック「Delete record」
+　　逆に新規の行を作るときは「＋」をクリックする
+
+
+
+参。ビューの作成
+
+左側の「Grid view」を右クリック「Duplicate view」をクリック
+「Grid view copy」が作成される。それを右クリック「Rename view」をクリック。「open view」に変える。
+
+「open view」を選択した状態で
+上部左側にある「Filter」をクリック
+　「＋Add condition」
+　　Where 状況 is 募集中
+これで、状況が「募集中」のものだけが表示されるビューができる
+
+
+
+肆。公開
+
+右上の「Share」をクリック
+「Share to web」
+　「Share to web」のチェックをオンにする
+　　「Embed this base」
+このコードをHTMLに貼り付ければ、設置できる
+
+
+
+伍。フォーム作成と公開
+
+上段の「Data」「Automations」「Interfaces」「Form」から「Form」をクリックする
+
+「Build it yourself」
+Table：Trades
+Form name：トレード希望書き込み
+「Create form」
+フォームが作成される
+
+各項目をクリックするとそれぞれの設定ができる
+必須項目にしたい項目は「Required field」をオンにする
+初期値は「Default value」で設定できる
+　「Allow users to edit this field」をオフにするとユーザーが変更できなくなる。
+　初期値を変えて欲しくない時に使う
+今回は
+「取引名」
+「出せるカード」
+の二つを必須項目にした
+「状況」は初期値を「募集中」にしてユーザー側で編集不可にした。
+
+右上の「Publish」をクリック
+「Share form」をクリック
+　「Anyone on the web」にチェック
+「＜＞Embed」をクリック
+このコードをHTMLに貼り付ければ、フォームを設置できる
+
+フォームで送信された内容は自動的にTradesテーブルに追加される
+これで、第三者が投稿できる状態になった
+
+
+
+
+
+用語
+
+ベース：データ全体。テーブル全部と言い換えても良い。今回で言えば「Mana Bazaar」にあたる。
+テーブル：表のこと。今回で言えば「Trades」にあたる。
+ビュー：同じテーブルを条件や表示方法を変えて見るためのもの。
+　　　　ビュー（視点）の名の通り、フィルターや並べ替えをかけて見やすくするために使う。
+　　　　コピーではないので、どのビューで変更しても同じテーブルのデータが変更される。
+
+</pre>
+
+<img src="tradebbs.png">
+
+</body>
+</html>

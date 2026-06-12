@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>GitHubメモ</title>
+</head>
+<body style="padding: 10px;">
+
+<pre style="width: 100%; white-space: pre-wrap;">
+
+GitHubメモ
+
+
+
+GitHubとは
+「自分の作品やサイトを安全に保存・管理して、必要なら公開もできる場所」
+ソースコード管理サービスだけれど、GitHub Pagesという機能を使えば静的サイトを公開できる。
+以下は、ホームページスペースとして使う方法を主として書いている。
+
+
+
+https://github.com
+
+アカウント作成→ログイン
+
+
+
+リポジトリ作成
+
+リポジトリは、GitHubで言う「ファイルの置き場所」と「変更履歴の管理単位」を兼ねたもの
+リポジトリを作るとこんなことができる。
+・HTML・CSS・JavaScript・画像ファイルなどをまとめて保存
+・変更履歴を自動で記録（いつ何を追加・修正したか）
+・過去の状態に戻すことが可能
+・他人と共有して共同編集できる
+・GitHub Pagesで公開できる（静的サイトの場合）
+
+① 画面右上の「＋」 → 「New repository」をクリック
+② リポジトリ名を入力（「Repository name」）
+③ Public（公開）か Private（非公開）を選ぶ
+④ 「Add README」にチェックを入れると最初の説明文が作れる
+⑤ 「Create repository」をクリック
+
+
+
+GitHub Pagesで公開する準備
+
+① リポジトリのトップページで「Settings」（上部の歯車アイコン）を開く
+② 左メニューの「Pages」を選択
+③ 「Branch」を main に設定し、フォルダは root（デフォルト）
+④ 「Save」をクリック
+⑤ 左上の「Code」タブをクリックしてリポジトリのトップページに戻る
+⑥ 「Add file」→「Upload files」
+⑦ HTML、CSS、JavaScript、画像などをドラッグ＆ドロップ
+　トップページのファイル名が「index.html」である必要がある。
+　　一度に100個以上のファイルは送れない。
+　　　「Commit changes」で実際にアップロードする。
+　　　　　つまり、100個以上のファイルを上げる場合、100個未満のファイルをドラッグして「Commit changes」を押すを繰り返す。
+⑧ Settings → Pages を開く
+⑨ 上部に「Your site is live at ...」のURLをクリックでサイトが開く。
+
+
+
+GitHub Pages公開URL
+
+https://ユーザー名.github.io/リポジトリ名/
+
+
+
+ファイルを更新する時
+
+① 更新するウェブサイトのリポジトリをクリック
+② ディレクトリ一覧が出るのでアップロードする場所に移動する
+③ Add file → Upload files
+④ 同じ名前のファイルをドラッグ＆ドロップ
+⑤ Commit changes
+例えば、
+archive
+└ log2026.html
+を更新したいなら、
+　GitHubで archive を開く
+　　Add file → Upload files
+　　　新しい log2026.html をアップロード
+　　　　Commit changes
+とする。
+
+
+
+無料アカウントの転送量の制限について。
+
+転送量の制限は概ね月100GB。
+例）
+サイト容量40MB（全部読み込んだとき）の場合
+100GB ÷ 40MB ≒ 2500回
+
+
+
+リポジトリ名の変更
+
+① リポジトリを開く
+② Settings
+③ Repository name を変更
+④ Rename
+
+
+
+リポジトリを削除する方法
+
+① 削除したいリポジトリを開く
+② 「Settings」をクリック
+③ 一番下までスクロール
+④ 「Danger Zone」を開く
+⑤ 「Delete this repository」をクリック
+⑥ 確認画面でリポジトリ名を入力
+⑦ 「I want to delete this repository」をクリック
+
+</pre>
+
+</body>
+</html>

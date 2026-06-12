@@ -1,0 +1,68 @@
+/*背景*/
+
+div#layerwall {
+  position:fixed;
+  right:0;
+  bottom:0;
+  min-width:100%;
+  min-height:100%;
+  width:auto;
+  height:auto;
+  z-index:-9;
+	background-image:url("material/wallgreen.png");
+opacity:0.6;
+}
+
+video#actwall{
+  position:fixed;
+  right:0;
+  bottom:0;
+  min-width:100%;
+  min-height:100%;
+  width:auto;
+  height:auto;
+  z-index:-10;
+}
+
+
+
+/*タイトル*/
+
+#title_block{
+margin:10px;
+width:240px;
+height:60px;
+border-style:outset;
+border-width:5px;
+border-color:#CC9966;
+/*背景を複数指定*/
+background-image:url("material/emblem_n.png"),url("material/woodboard.jpg");
+background-size:contain,cover;
+background-repeat:no-repeat,repeat;
+background-position:50% 50%,0% 0%;
+}
+
+#title{
+color:#663300;
+text-shadow:1px 1px 1px #111111;
+font-family:fantasy;
+font-size:42px;
+font-weight:900;
+text-align:center;
+display:block;
+}
+
+
+
+/*フォント*/
+
+.orange{
+color:#996633;
+font-weight:800;
+}
+
+.apptitle{
+color:#FFFF00;
+font-size:42px;
+font-weight:200;
+}

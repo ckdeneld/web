@@ -34,9 +34,10 @@ a:hover		{color:#FF0000;}
     margin:0px 10px;
   }
     .sitename{
-      color:#CC3300;
+      color:#CCCC00;
       font-size:40px;
       font-weight:700;
+      text-shadow: 2px 2px 1px #333333;
     }
   #subtext{
     margin:0px 10px;
@@ -54,7 +55,7 @@ a:hover		{color:#FF0000;}
       margin:10px 10px;
     }
     .text_sub3{
-    color:#33FF00;
+    color:#33CC00;
     font-size:24px;
     text-shadow: 2px 2px 1px #333333;
     }
@@ -62,7 +63,7 @@ a:hover		{color:#FF0000;}
     margin:10px 10px;
     }
     .text_sub4{
-      color:#CCCC00;
+      color:#33FF00;
       font-size:16px;
       text-shadow: 2px 2px 1px #333333;
       }

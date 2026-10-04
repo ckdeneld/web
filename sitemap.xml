@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+
+<!--
+XML（Extensible Markup Language）は、データを構造化して記述するための形式。
+HTMLが主に人間にページを表示するためのものなのに対し、
+XMLはデータの内容や構造を機械に伝える用途にも使われる。
+
+このsitemap.xmlは、検索エンジンにサイト内のページのURLを伝えるためのファイル。
+ここに書いたURLが検索結果に掲載されることを保証するものではないが、
+検索エンジンがページを発見するための手掛かりになる。
+
+<urlset>
+    サイトマップに登録するURL全体を囲む。
+
+<url>
+    1つのURLについて記述する。
+
+<loc>
+    登録するページのURLを記述する。
+
+つまり、
+
+<url>
+    <loc>ページのURL</loc>
+</url>
+
+で、1ページ分を登録している。
+
+なお、同じHTMLページ内の<a href="#...">のような
+ページ内リンクは、独立したページではないためここには登録しない。
+-->
+
+
+
+  <!-- トップページ -->
+  <url>
+    <loc>https://ckdeneld.github.io/web/</loc>
+  </url>
+
+  <url>
+    <loc>https://ckdeneld.github.io/web/archive/log2018.html</loc>
+  </url>
+
+  <url>
+    <loc>https://ckdeneld.github.io/web/archive/log2019.html</loc>
+  </url>
+
+  <url>
+    <loc>https://ckdeneld.github.io/web/archive/log2020.html</loc>
+  </url>
+
+  <url>
+    <loc>https://ckdeneld.github.io/web/archive/log2021.html</loc>
+  </url>
+
+  <url>
+    <loc>https://ckdeneld.github.io/web/archive/log2022.html</loc>
+  </url>
+
+  <url>
+    <loc>https://ckdeneld.github.io/web/archive/log2023.html</loc>
+  </url>
+
+  <url>
+    <loc>https://ckdeneld.github.io/web/archive/log2024.html</loc>
+  </url>
+
+  <url>
+    <loc>https://ckdeneld.github.io/web/archive/log2025.html</loc>
+  </url>
+
+  <url>
+    <loc>https://ckdeneld.github.io/web/archive/log2026.html</loc>
+  </url>
+
+  <url>
+    <loc>https://ckdeneld.github.io/web/archive/log2027.html</loc>
+  </url>
+
+  <url>
+    <loc>https://ckdeneld.github.io/web/archive/log2028.html</loc>
+  </url>
+
+  <url>
+    <loc>https://ckdeneld.github.io/web/archive/log2029.html</loc>
+  </url>
+
+
+
+</urlset>
